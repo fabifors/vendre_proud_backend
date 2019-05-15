@@ -46,7 +46,7 @@ app.get('/oauth', function(req, res) {
     // If it's there...
 
     // We'll do a GET call to Slack's `oauth.access` endpoint, passing our app's client ID, client secret, and the code we just got as query parameters.
-    req(
+    Request(
       {
         url: 'https://slack.com/api/oauth.access', //URL to hit
         qs: {
