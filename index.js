@@ -19,7 +19,7 @@ app.use(cors())
 var globalToken = null
 
 // Again, we define a port we want to listen to
-const PORT = 4390
+const PORT = process.env.PORT || 4390
 
 // Lets start our server
 app.listen(PORT, function() {
