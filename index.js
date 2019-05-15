@@ -2,6 +2,7 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var cors = require('cors')
+var request = require('request')
 
 const { WebClient } = require('@slack/web-api')
 
@@ -46,7 +47,7 @@ app.get('/oauth', function(req, res) {
     // If it's there...
 
     // We'll do a GET call to Slack's `oauth.access` endpoint, passing our app's client ID, client secret, and the code we just got as query parameters.
-    Request(
+    request(
       {
         url: 'https://slack.com/api/oauth.access', //URL to hit
         qs: {
